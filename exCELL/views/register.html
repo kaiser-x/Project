@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./app/css/app.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src="app.js"></script>
+    <title>exCELL</title>
+</head>
+<body>
+    <nav id="mainnav" class="navbar navbar-expand-lg">
+        <h4 class="navbar-brand display-md-4">exCELL-Register</h4>
+     <button class="navbar-toggler" data-toggle="collapse" data-target="#expandme">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="expandme"> 
+            <div class="navbar-nav">
+                <a href="/" class="nav-item nav-link">Home</a>
+                <a href="#foot" class="nav-item nav-link">Contact</a>
+            </div> 
+        </div>
+    </nav>
+    <div id="join" style="text-align: center;">
+        <%if(message=='success' ) {%>
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <h3 class="alert-heading">Data Saved Successfully!</h3>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </div>
+        <%}%> <%if(message=='failed') {%>
+        <div class="alert-failed alert alert-danger alert-dismissible fade show" role="alert">
+          <h3 class="alert-heading">Unsuccessfull!!! try again</h3>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </div>
+        <%}%>
+        <section class="container mb-5" id="innersec">
+            <h1 class="display-md-1">Registration💖</h1>
+            <h3 ><b>Personal Details:</b></h3>
+            <form id="formreg" action="/register" method="post">
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="fname">First Name:</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder= "First Name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lname">Last Name:</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="height">Height:</label>
+                        <select name="height" id="height" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="45">4' 5"</option>
+                            <option value="46">4' 6"</option>
+                            <option value="47">4' 7"</option>
+                            <option value="48">4' 8"</option>
+                            <option value="49">4' 9"</option>
+                            <option value="5">5'</option>
+                            <option value="51">5' 1"</option>
+                            <option value="52">5' 2"</option>
+                            <option value="54">5' 4"</option>
+                            <option value="56">5' 6"</option>
+                            <option value="68">5' 8"</option>
+                            <option value="510">5' 10"</option>
+                            <option value="511">5' 11"</option>
+                            <option value="6">6'</option>
+                            <option value="61">6' 1"</option>
+                            <option value="62">6' 2"</option>
+                            <option value="63">6' 3"</option>
+                            <option value="64">6' 4"</option>
+                            <option value="65">6' 5"</option>
+                            <option value="66">6' 6"</option>
+                            <option value="67">6' 7"</option> 
+                        </select>
+                        <label for="bldgrp">Blood Group:</label>
+                        <select name="bldgrp" id="bldgrp" class="form-control" required>
+                            <option value="">Select</option>
+                            <option value="A pos">A+</option>
+                            <option value="A neg">A-</option>
+                            <option value="A1B pos">A1B+</option>
+                            <option value="A1B neg">A1B-</option>
+                            <option value="B pos">B+</option>
+                            <option value="B neg">B-</option>
+                            <option value="AB pos">AB+</option>
+                            <option value="AB neg">AB-</option>
+                            <option value="O pos">O+</option>
+                            <option value="O neg">O-</option>
+                            <option value="BO pos">Bombay O+</option>
+                            <option value="BO neg">Bombay O-</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="weight">Weight:</label>
+                        <input type="number" class="form-control" id="weight" name="weight" placeholder="Weight(KG)" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mtg">Mother Tongue:</label>
+                    <select name="mtg" id="mtg" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="Assamese">Assamese</option>
+                        <option value="Bangla">Bangla</option>
+                        <option value="Bodo">Bodo</option>
+                        <option value="Dogri">Dogri</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Kashmiri">Kashmiri</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Konkani">Konkani</option>
+                        <option value="Maithili">Maithili</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="Manipuri">Manipuri</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Nepali">Nepali</option>
+                        <option value="Oriya">Oriya</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Santali">Santali</option>
+                        <option value="Sindhi">Sindhi</option>
+                        <option value="Urdu">Urdu</option>
+                    </select>
+                </div>
+                <h2 class="mt-4"><b>Ethnic details:</b></h2>
+                <p> Human Leukocyte Antigen (HLA) is linked to ethnicity and tends to be similar in people belonging to the same ethnic communities such as the same country, state, language groups and ethnic roots/origin. This information can help us to identify the best matching donor, closest in ethnicity to a patient.</p>
+                <h3 class="mt-4"><b> Details:</b></h3>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fsto">State of Origin:</label>
+                    <select name="fsto" id="fsto" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="ANI">Andaman and Nicobar Islands</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="aperiam">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="DNH">Dadra and Nagar Haveli</option>
+                        <option value="DD">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JK">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="fmtg">Mother Tongue:</label>
+                    <select name="fmtg" id="fmtg" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="Assamese">Assamese</option>
+                        <option value="Bangla">Bangla</option>
+                        <option value="Bodo">Bodo</option>
+                        <option value="Dogri">Dogri</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Kashmiri">Kashmiri</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Konkani">Konkani</option>
+                        <option value="Maithili">Maithili</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="Manipuri">Manipuri</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Nepali">Nepali</option>
+                        <option value="Oriya">Oriya</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Santali">Santali</option>
+                        <option value="Sindhi">Sindhi</option>
+                        <option value="Urdu">Urdu</option>
+                    </select>
+                </div>
+            </div>
+                <h3><b>Mother Details:</b></h3>
+                <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="msto">State of Origin:</label>
+                    <select name="msto" id="msto" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="ANI">Andaman and Nicobar Islands</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="aperiam">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="DNH">Dadra and Nagar Haveli</option>
+                        <option value="DD">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JK">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="mmtg">Mother Tongue:</label>
+                    <select name="mmtg" id="mmtg" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="Assamese">Assamese</option>
+                        <option value="Bangla">Bangla</option>
+
+                        <option value="Bodo">Bodo</option>
+                        <option value="Dogri">Dogri</option>
+                        <option value="Gujarati">Gujarati</option>
+                        <option value="Hindi">Hindi</option>
+                        <option value="Kashmiri">Kashmiri</option>
+                        <option value="Kannada">Kannada</option>
+                        <option value="Konkani">Konkani</option>
+                        <option value="Maithili">Maithili</option>
+                        <option value="Malayalam">Malayalam</option>
+                        <option value="Manipuri">Manipuri</option>
+                        <option value="Marathi">Marathi</option>
+                        <option value="Nepali">Nepali</option>
+                        <option value="Oriya">Oriya</option>
+                        <option value="Punjabi">Punjabi</option>
+                        <option value="Tamil">Tamil</option>
+                        <option value="Telugu">Telugu</option>
+                        <option value="Santali">Santali</option>
+                        <option value="Sindhi">Sindhi</option>
+                        <option value="Urdu">Urdu</option>
+                    </select>
+                </div>
+            </div>
+                <h2><b>Your Address:</b></h2>
+                <div class="form-group">
+                    <label for="street">Street Address:</label>
+                    <input type="text" class="form-control" id="street" name="street" placeholder="EX: 94/32A Seseme Street" required>
+                </div>
+                <div class="form-row">
+                <div class="form-group  col-md-6">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" placeholder="EX:Mumbai" required>
+                </div>
+                <div class="form-group   col  col-md-3 ">
+                    <label for="state">State:</label>
+                    <select name="state" id="state" class="form-control" required>
+                        <option value="">Select</option>
+                        <option value="ANI">Andaman and Nicobar Islands</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="aperiam">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chandigarh">Chandigarh</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="DNH">Dadra and Nagar Haveli</option>
+                        <option value="DD">Daman and Diu</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JK">Jammu and Kashmir</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Ladakh">Ladakh</option>
+                        <option value="Lakshadweep">Lakshadweep</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharastra">Maharastra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Puducherry">Puducherry</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="WB">West Bengal</option>
+                    </select>
+                </div>
+                <div class="form-group  col  col-md-3 ">
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" class="form-control" id="zip" name="zip" placeholder="EX:641402" required>
+                </div>
+            </div>
+            <h2><b>Contact Information:</b></h2>
+            <p>Do you use WhatsApp?</p>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="whatsappy" value="whatsappy">
+                    <label class="form-check-label" for="whatsappy">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="whatsappn" value="whatsappn">
+                    <label class="form-check-label" for="whatsappn">No</label>
+                </div>
+            </div>
+              <br>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="mno">Mobile Number:</label>
+                    <input type="tel" class="form-control" name="mno" id="mno" placeholder= "Mobile Number" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="amno">Alternate Number:</label>
+                    <input type="tel" class="form-control" name="amno" id="amno" placeholder="Alternate Number" required>
+                </div>
+            </div>  
+            <div class="form-row ">
+                    <div class="form-group col-md-6">
+                        <label for="em">Email:</label>
+                        <input type="email" class="form-control" name="em" id="em" placeholder= "Email" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="aem">Alternate Email:</label>
+                        <input type="email" class="form-control" name="aem" id="aem" placeholder="Alternate Email" required>
+                    </div>
+            </div>
+            <h2><b>Contact persons:</b></h2>
+            <p> Please provide the names and contact details of two of your closest relatives (not parents), who will know how to reach you if we are unable to contact you.</p>
+            <h3>First Person:</h3>
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label for="c1fname">First Name:</label>
+                    <input type="text" class="form-control" name="c1fname" id="c1fname" placeholder= "First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="c1lname">Last Name:</label>
+                    <input type="text" class="form-control" name="c1lname" id="c1lname" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group   col-md-6 ">
+                <label for="r1el">Relation:</label>
+                <select name="r1el" id="r1el" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="Aunt">Aunt</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Cousin">Cousin</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Uncle">Uncle</option>
+                    <option value="Wife">Wife</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="m1rel">Mobile Number:</label>
+                <input type="tel" class="form-control" name="m1rel" id="m1rel" placeholder="Mobile Number" required>  
+            </div>
+        </div>
+        <h3>Second Person:</h3>
+            <div class="form-row ">
+                <div class="form-group col-md-6">
+                    <label for="c2fname">First Name:</label>
+                    <input type="text" class="form-control" name="c2fname" id="c2fname" placeholder= "First Name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="c2lname">Last Name:</label>
+                    <input type="text" class="form-control" name="c2lname" id="c2lname" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-row">
+            <div class="form-group   col-md-6 ">
+                <label for="r2el">Relation:</label>
+                <select name="r2el" id="r2el" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="">Select</option>
+                    <option value="Aunt">Aunt</option>
+                    <option value="Brother">Brother</option>
+                    <option value="Cousin">Cousin</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Sister">Sister</option>
+                    <option value="Uncle">Uncle</option>
+                    <option value="Wife">Wife</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="m2rel">Mobile Number:</label>
+                <input type="tel" class="form-control" name="m2rel" id="m2rel" placeholder="Mobile Number" required>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="form-row justify-content-center">
+                <button type="submit" class="button is-rounded is-success">Register👏</button>
+            </div>
+        </div>
+        <br><br>
+        </form>
+        </section>
+
+    <footer class="footer-dark">
+        <div class="container">  
+            <div class="col item social"><a href="https://github.com/kaiser-x"><i class="icon ion-social-github"></i></a><a href="mailto:tk45935@gmail.com" enctype="text/plain"><i class="icon ion-email"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+        </div>
+        <p class="copyright">Code Lannister © 2021</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>    
+    <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./app/css/app.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="/vendors/formvalidation/dist/css/formValidation.min.css"
+    /> -->
+    <title>exCELL</title>
+  </head>
+  <body>
+    <nav id="mainnav" class="navbar navbar-expand-lg">
+      <h3 class="navbar-brand">exCELL</h3>
+      <button
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#expandme"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="expandme">
+        <div class="navbar-nav">
+          <a href="/" class="nav-item nav-link">Home</a>
+          <a href="#faq" class="nav-item nav-link">FAQ</a>
+          <a href="#registerid" class="nav-item nav-link">Register</a>
+          <a href="/getdetails" class="nav-item nav-link">Get Deatails♥</a>
+
+          <!-- <a href="/logout" class="nav-item nav-link">Logout</a>
+
+          <a href="/signup" class="nav-item nav-link">Signup</a>
+          <a href="/login" class="nav-item nav-link">Login</a> -->
+
+          <!-- <form action="/getdetails">
+            <button class="btn-outline nav-item">Get Deatails♥</button>
+          </form> -->
+          <a href="#foot" class="nav-item nav-link">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <header id="head">
+      <div class="col d-flex justify-content-end mt-lg-5 mt-1">
+        <h1>Let's Delete Cancer</h1>
+      </div>
+    </header>
+    <section class="container mt-lg-5 mb-5" id="how">
+      <h1 class="display-1 text-center">How does it work?</h1>
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="./app/imgs/reg.jpg" alt="" />
+        </div>
+        <div class="col-lg-6 mt-3">
+          <h3>1. Order a swab kit online</h3>
+          <p>
+            Answer a few simple questions about yourself to make sure you’ll be
+            eligible to donate if needed. If it’s a yes, then you’ll be directed
+            to a page where you can request your swab kit online.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-end">
+        <div class="col-md-6 order-2 order-md-1">
+          <h3>2. Swab your cheecks, return your kit</h3>
+          <p>
+            Swab the inside of your cheeks and send the swabs back to us (there
+            are instructions on the envelope that will be sent). The swabs will
+            then be analyzed in our lab to determine your HLA (tissue)
+            characteristics – this is how we match donors and patients.
+          </p>
+        </div>
+        <div class="col-md-4 order-1 order-md-2">
+          <img src="./app/imgs/swab.jpg" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="./app/imgs/db.jpg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h3>3. We will add you to the registry</h3>
+          <p>
+            Once we have analyzed your samples, we will add you to the registry
+            and you will be available for patients all around the world who are
+            searching for a donor. Amazing!
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="./app/imgs/match.jpg" alt="" />
+        </div>
+        <div class="col-lg-6 mt-3">
+          <h3>4. You are a match</h3>
+          <p>
+            If you come up as a potential match for someone, the donation
+            process can begin. Our team will be in touch as soon as possible.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-end">
+        <div class="col-md-6 order-2 order-md-1">
+          <h3>5. Health check</h3>
+          <p>
+            Will contact you and you will be asked to provide a blood sample for
+            further testing. If the results confirm that you are a suitable
+            donor, you will be asked to donate your stem cells.
+          </p>
+        </div>
+        <div class="col-md-4 order-1 order-md-2">
+          <img src="./app/imgs/health.jpg" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="./app/imgs/donate_300x300.jpg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h3>6. Peripheral blood stem cell donation</h3>
+          <p>
+            Peripheral blood stem cell collection is safe and the most commonly
+            used donation method today. Prior to the blood stem cell collection,
+            the donor receives a daily injection of G-CSF for five consecutive
+            days, to mobilize and build up the number of stem cells in the
+            circulating bloodstream.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-end">
+        <div class="col-md-6 order-2 order-md-1">
+          <h3>7. The patient receives your blood stem cells</h3>
+          <p>
+            The collected blood stem cells are transplanted to the patient, in a
+            procedure similar to a blood transfusion.
+          </p>
+        </div>
+        <div class="col-md-4 order-1 order-md-2">
+          <img src="./app/imgs/rec_300x300.jpg" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="./app/imgs/Success-300-by-300.jpg" alt="" />
+        </div>
+        <div class="col-lg-6">
+          <h3>8. A second chance at life</h3>
+          <p>
+            Your job is done and your incredible donation will help to give
+            someone a second chance at life.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="container mt-5 mb-5" id="myth">
+      <h1 id="myh" class="text-center display-1">Facts and Myths</h1>
+      <h1>FACT: Donating is less painful than you probably think.</h1>
+      <p>
+        Many mistakenly believe that donating blood stem cells is painful, when
+        in reality it’s not.
+      </p>
+      <ul>
+        <li>
+          While TV shows and movies have wildly exaggerated blood stem cell
+          donation—especially bone marrow donation—as something scary, the
+          reality is much less dramatic.
+        </li>
+        <li>
+          Discomfort during recovery varies from person to person. Side effects
+          may include back pain, fatigue, headache or bruising for a few days or
+          weeks.
+        </li>
+        <li>
+          The vast majority of donors say it was worth it to help save a life,
+          and they would do it again.
+        </li>
+      </ul>
+      <h1>
+        FACT: Most blood stem cell donors give peripheral blood stem cells—a
+        process similar to donating plasma.
+      </h1>
+      <p>
+        Some think that the only way to donate blood stem cells is through a
+        surgical procedure. The reality is that 79% of donations are peripheral
+        blood stem cells, which involves no surgery at all!
+      </p>
+      <ul>
+        <li>
+          <a
+            href="https://en.wikipedia.org/wiki/Peripheral_stem_cell_transplantation"
+            >PBSC donation
+          </a>
+          is a nonsurgical procedure and the most common way to donate. For 5
+          days leading up to donation, you will be given injections of a drug
+          called filgrastim to increase the number of cells in your bloodstream
+          that are used for transplant. Some of your blood is then removed
+          through a needle in one arm and passed through a machine that
+          separates out the blood-forming cells. The remaining blood is returned
+          to you through the other arm.
+        </li>
+        <li>
+          <a href="https://en.wikipedia.org/wiki/Bone_marrow"
+            >Bone Marrow donation</a
+          >
+          is a surgical, usually outpatient procedure. You will receive
+          anesthesia and feel no pain during the donation. Doctors use a needle
+          to withdraw liquid marrow from the back of your pelvic bone via two
+          small punctures.
+        </li>
+      </ul>
+      <h1>FACT: There are few risks to donating.</h1>
+      <p>
+        It is a common misconception that donating blood stem cells is
+        dangerous. The truth is that there are actually very few risks in
+        donating blood stem cells!
+      </p>
+      <ul>
+        <li>
+          Protecting the safety of our donors and maintaining the public’s trust
+          is essential to saving lives.
+        </li>
+        <li>
+          All donors are carefully prescreened to ensure they are healthy and
+          the procedure is safe for them.
+        </li>
+        <li>
+          here are rarely any long-term side effects from donating either PBSC
+          or marrow. The donor’s immune system stays strong, and their blood
+          stem cells replenish themselves in 4 to 6 weeks.
+        </li>
+        <li>
+          While no medical procedure is completely risk free, every precaution
+          is taken to ensure the safety and well-being of the donor.
+        </li>
+        <li>
+          Because only 1 to 5% or less of your marrow is needed to save the
+          patient’s life, your immune system stays strong.
+        </li>
+      </ul>
+      <h1>FACT: It doesn’t take long to save someone’s life.</h1>
+      <p>It’s actually a myth that the donation process takes a long time!</p>
+      <ul>
+        <li>
+          Online registration takes about 10 minutes. Completing and returning a
+          cheek swab kit only takes a few minutes.
+        </li>
+        <li>
+          If you’re called to donate, the typical time commitment for the
+          donation process is 20-30 hours spread out over a four-to- six-week
+          period. This includes phone calls, appointments and the donation.
+        </li>
+      </ul>
+      <h1>
+        FACT: Ethnic background is an important factor for matching donors and
+        patients.
+      </h1>
+      <ul>
+        <li>
+          Patients are most likely to match someone of the same ethnic
+          background. That’s because genetic type is inherited.
+        </li>
+        <li>
+          Adding more registry members who increase the ethnic diversity of the
+          registry increases the variety of tissue types available, helping more
+          patients find the match they need.
+        </li>
+      </ul>
+      <h1>
+        FACT: Age guidelines protect the safety of the donor and provide the
+        best possible outcome for the patient. They are not meant to
+        discriminate.
+      </h1>
+      <p>
+        Some believe that the age guidelines we have in place are to
+        discriminate against those 45 and older. However, these guidelines are
+        meant to protect the safety of the patient AND the donor.
+      </p>
+      <ul>
+        <li>
+          Donors between the ages of 18 & 44 provide the greatest chance for
+          transplant success.
+        </li>
+        <li>Doctors request donors in the 18-44 age group 86% of the time.</li>
+      </ul>
+    </section>
+    <section class="container mt-5 mb-5" id="faq">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 pt-5">
+          <h1>Freuently asked Questions-</h1>
+        </div>
+        <div class="col-lg-4">
+          <img class="" src="./app/imgs/faq.png" alt="faq" />
+        </div>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              What is blood cancer?
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Blood cancer is the generic term for malignant diseases of the
+              bone marrow or blood-forming system, in which normal blood
+              formation is disturbed by the uncontrolled multiplication of
+              malignant blood cells. Because of these cancer cells, the blood
+              can no longer perform its vital tasks, such as fighting
+              infections, transporting oxygen or stopping bleeding.
+              <br />
+              <strong> Curing blood cancer</strong>
+              <br />
+              Blood cancer patients can often only overcome the disease with the
+              help of a stem cell donation from a suitable donor. In the case of
+              leukaemia and malignant lymphomas, the transfer of healthy stem
+              cells is even the only chance of a cure.
+              <br />
+              <strong> Leukaemia</strong>
+              <br />
+              A series of malignant diseases in which there is a pathologically
+              increased proliferation of immature and therefore non-functional
+              white blood cells. Malignant lymphomas are divided into Hodgkin's
+              disease (lymphogranulomatosis) and non-Hodgkin's lymphomas
+              (lymphatic leukaemia) according to their different
+              characteristics.
+              <br />
+              <strong>Lymphoma, malignant</strong>
+              <br />
+              Malignant alteration of lymphatic tissue with swelling of the
+              lymph nodes and pathological enlargement of the spleen. Malignant
+              lymphomas are divided according to their different characteristics
+              into Hodgkin's disease (lymphogranulomatosis) and non-Hodgkin's
+              lymphomas (lymphatic leukemia), which originate from the lymph
+              nodes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              How does a stem cell donation work?
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Peripheral blood stem cell collection is safe and the most
+              commonly used donation method today. Prior to the blood stem cell
+              collection, the donor receives a daily injection of G-CSF for five
+              consecutive days, to mobilize and build up the number of stem
+              cells in the circulating bloodstream. G-CSF increases the number
+              of stem cells in the peripheral blood, which are then obtained
+              directly from the blood using a special procedure. The process is
+              similar to a blood platelet donation that takes approximately four
+              hours to complete.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Am I missing stem cells after the donation?
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              The body reproduces the stem cells within about two weeks. The
+              procedure is comparable to a blood platelet donation and does not
+              lead to a permanent loss of stem cells.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingfour">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapsefour"
+              aria-expanded="false"
+              aria-controls="collapsefour"
+            >
+              How does the search for a blood stem cell donor work?
+            </button>
+          </h2>
+          <div
+            id="collapsefour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingfour"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              Looking for a matching stem cell donor is like looking for a
+              needle in a haystack. When a blood cancer or blood disorder
+              patient depends on a blood stem cell transplant to survive, they
+              need a donor whose tissue characteristics are a 100% match, if
+              possible. Search requests are sent to the World Marrow Donor
+              Association (WMDA), and if a potential donor is found on the
+              DKMS-BMST database, to match the patient, we will be informed and
+              we will then contact the donor immediately.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container mt-5 mb-5" id="registerid">
+      <div class="row">
+        <div
+          class="
+            col
+            d-flex
+            justify-content-center
+            align-items-center
+            mt-5 mt-lg-0
+          "
+          id="regbt"
+        >
+          <form action="/register">
+            <button class="btn-outline" href>Register♥</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="mt-5 text-center">Contact Me</h2>
+    <section id="contact" class="contact container">
+      <form action="mailto:tk45935@gmail.com" enctype="text/plain">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="cname">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cname"
+              placeholder="Your Name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="cmail">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="cmail"
+              placeholder="Your Email"
+            />
+          </div>
+        </div>
+        <div class="cmnt">
+          <label for="comments">You Comments:</label><br />
+          <textarea
+            name="comments"
+            id="comments"
+            cols="30"
+            rows="10"
+            placeholder="Enter what you think"
+          ></textarea>
+        </div>
+        <button class="btn Send m-3">Send</button>
+      </form>
+    </section>
+
+    <footer class="footer-dark" id="foot">
+      <div class="container">
+        <div class="col item social">
+          <a href="https://github.com/kaiser-x"
+            ><i class="icon ion-social-github"></i></a
+          ><a href="mailto:tk45935@gmail.com" enctype="text/plain"
+            ><i class="icon ion-android-arrow-down"></i></a
+          ><a href="#"><i class="icon ion-social-instagram"></i></a>
+        </div>
+      </div>
+      <p class="copyright">Code Lannister © 2021</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js"></script>
+    <!-- <script src="/vendors/formvalidation/dist/js/FormValidation.min.js"></script>
+    <script src="/vendors/formvalidation/dist/js/plugins/Bootstrap3.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

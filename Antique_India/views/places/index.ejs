@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<h2>All Antique places</h2>
+<a href="/places/new">Add new</a>
+
+<% for(let el of allPlaces){ %>
+<div class="card">
+  <div class="row">
+    <div class="col-md-4">
+      <img src="<%=el.image%>" class="img-fluid" alt="" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h4><%=el.title%></h4>
+        <p><%=el.description%></p>
+        <p><%=el.price%></p>
+        <p class="card-text">
+          <small class="text-muted"><%=el.location%></small>
+        </p>
+        <a href="places/<%=el._id%>" class="btn btn-primary">View</a>
+      </div>
+    </div>
+  </div>
+</div>
+<% }%>
